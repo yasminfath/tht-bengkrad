@@ -41,7 +41,8 @@ $conn->close();
                     text: "Latency"
                 },
                 axisX: {
-                    title: "Time"
+                    title: "Time",
+                    valueFormatString: "HH:mm"
                 },
                 axisY: {
                     title: "Latency (ms)"
@@ -49,7 +50,7 @@ $conn->close();
                 data: [{
                     type: "spline",
                     markerSize: 5,
-                    xValueFormatString: "D/M/YYYY",
+                    xValueFormatString: "HH:mm",
                     yValueFormatString: "#0",
                     xValueType: "dateTime",
                     dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
@@ -64,4 +65,3 @@ $conn->close();
     <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 </body>
 </html>
-
